@@ -495,7 +495,7 @@
         <span class="lab-title">WannaCry: Static &amp; Dynamic Ransomware Analysis with Live Memory Key Extraction</span>
         <a class="lab-link" href="https://harsh2.medium.com/wannacry-the-ransomworm-6a1ba9d1e316?sharedUserId=harsh2" target="_blank" rel="noopener">Read on Medium →</a>
       </div>
-      <p>End-to-end reverse engineering of a live WannaCry sample in Ghidra and REMnux — identified the packed payload and extraction password via entropy analysis, then captured the RSA-2048 private key live from process memory in x32dbg and used it to decrypt an encrypted file, closing the loop without paying the ransom.</p>
+      <p>End-to-end reverse engineering of a live WannaCry sample in Ghidra and REMnux and identified the packed payload and extraction password via entropy analysis, then captured the RSA-2048 private key live from process memory in x32dbg, then allowed the malware to run fully and encrypt files. Finally, used the recovered key to decrypt an encrypted file, closing the loop without paying the ransom.</p>
     </div>
 
     <div class="lab">
@@ -503,7 +503,7 @@
         <span class="lab-title">Threat Detection Lab: Cowrie Honeypot + Splunk SIEM on AWS</span>
         <a class="lab-link" href="https://github.com/harshb30/Honeypot-SIEM-AWS-Lab" target="_blank" rel="noopener">View on GitHub →</a>
       </div>
-      <p>Deployed a Cowrie SSH honeypot in Docker on AWS EC2, exposed to live internet traffic. Ingested logs into Splunk via Universal Forwarder and identified cryptominer trojans from two distinct threat actors through OSINT and payload analysis.</p>
+      <p>Deployed a Cowrie SSH honeypot in Docker on AWS EC2 and exposed to live internet traffic. Ingested logs into Splunk via Universal Forwarder and identified real cryptominer trojans from two distinct threat actors through OSINT and payload analysis.</p>
     </div>
 
     <div class="lab">
