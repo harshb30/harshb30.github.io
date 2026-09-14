@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Harsh Bhandari — Security &amp; Infrastructure Consultant</title>
-<meta name="description" content="Harsh Bhandari — Security and Infrastructure Consultant. SIEM, threat detection, malware analysis, infrastructure hardening.">
+<title>Harsh Bhandari Security &amp; Infrastructure Consultant</title>
+<meta name="description" content="Harsh Bhandari Security and Infrastructure Consultant. SIEM, threat detection, malware analysis, infrastructure hardening.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -58,6 +58,7 @@
 
   /* ---------- Hero / terminal boot ---------- */
   .hero{
+	position:relative;
     min-height:100svh;
     display:flex;
     flex-direction:column;
@@ -160,6 +161,32 @@
     border-color:var(--accent);
     color:var(--accent);
   }
+
+  .scroll-arrow{
+    position:absolute;
+    bottom:28px;
+    left:50%;
+    transform:translateX(-50%);
+    display:flex;
+    flex-direction:column;
+    gap:0;
+    animation:bounce 1.5s ease-in-out infinite;
+  }
+  
+  .scroll-arrow span{
+    width:18px;
+    height:18px;
+    border-right:3px solid var(--accent);
+    border-bottom:3px solid var(--accent);
+    transform:rotate(45deg);
+    margin-top:-7px;
+  }
+  
+  @keyframes bounce{
+    0%, 100%{transform:translateX(-50%) translateY(0);}
+    50%{transform:translateX(-50%) translateY(7px);}
+  }
+
 
   /* ---------- Section shell ---------- */
   section{
@@ -427,9 +454,9 @@
   <h1>harsh_bhandari</h1>
   <div class="role">Security &amp; Infrastructure Consultant</div>
   <p class="summary">
-    3.5+ years securing global enterprise environments across defence, automotive, and manufacturing.
+    3.5+ years securing global enterprise environments across defence, automotive and manufacturing.
     SIEM-based threat monitoring, honeypot-driven attacker analysis, digital forensics, malware reverse
-    engineering, and infrastructure hardening — backed by an MSc in Cyber Security, CompTIA Security+,
+    engineering, and infrastructure hardening backed by an MSc in Cyber Security, CompTIA Security+,
     and ISC2 CC.
   </p>
   <div class="meta">
@@ -442,6 +469,10 @@
     <a href="https://harsh2.medium.com/" target="_blank" rel="noopener">Medium</a>
     <a href="mailto:harshbhandari.work@gmail.com">Email</a>
   </nav>
+  <div class="scroll-arrow">
+  <span></span>
+  <span></span>
+  </div>
 </header>
 
 <main class="wrap">
@@ -452,7 +483,7 @@
     <div class="lab">
       <div class="lab-head">
         <span class="lab-title">WannaCry: Static &amp; Dynamic Ransomware Analysis with Live Memory Key Extraction</span>
-        <a class="lab-link" href="https://harsh2.medium.com/" target="_blank" rel="noopener">Read on Medium →</a>
+        <a class="lab-link" href="https://harsh2.medium.com/wannacry-the-ransomworm-6a1ba9d1e316?sharedUserId=harsh2" target="_blank" rel="noopener">Read on Medium →</a>
       </div>
       <p>End-to-end reverse engineering of a live WannaCry sample in Ghidra and REMnux — identified the packed payload and extraction password via entropy analysis, then captured the RSA-2048 private key live from process memory in x32dbg and used it to decrypt an encrypted file, closing the loop without paying the ransom.</p>
     </div>
@@ -460,7 +491,7 @@
     <div class="lab">
       <div class="lab-head">
         <span class="lab-title">Threat Detection Lab: Cowrie Honeypot + Splunk SIEM on AWS</span>
-        <a class="lab-link" href="https://github.com/harshb30" target="_blank" rel="noopener">View on GitHub →</a>
+        <a class="lab-link" href="https://github.com/harshb30/Honeypot-SIEM-AWS-Lab" target="_blank" rel="noopener">View on GitHub →</a>
       </div>
       <p>Deployed a Cowrie SSH honeypot in Docker on AWS EC2, exposed to live internet traffic. Ingested logs into Splunk via Universal Forwarder and identified cryptominer trojans from two distinct threat actors through OSINT and payload analysis.</p>
     </div>
@@ -468,7 +499,7 @@
     <div class="lab">
       <div class="lab-head">
         <span class="lab-title">Brute Force Detection &amp; SIEM</span>
-        <a class="lab-link" href="https://github.com/harshb30" target="_blank" rel="noopener">View on GitHub →</a>
+        <a class="lab-link" href="https://github.com/harshb30/BruteForce-SIEM-HomeLab" target="_blank" rel="noopener">View on GitHub →</a>
       </div>
       <p>Home lab using Kali Linux, Hydra, Windows Event Logs, and Splunk SIEM on Ubuntu to simulate brute-force attacks and validate intrusion detection.</p>
     </div>
@@ -476,7 +507,7 @@
     <div class="lab">
       <div class="lab-head">
         <span class="lab-title">DoS Simulation &amp; Splunk Threat Hunting</span>
-        <a class="lab-link" href="https://github.com/harshb30" target="_blank" rel="noopener">View on GitHub →</a>
+        <a class="lab-link" href="https://github.com/harshb30/DoS-SIEM-Simulation" target="_blank" rel="noopener">View on GitHub →</a>
       </div>
       <p>Simulated a DoS attack against a Kali/Ubuntu/Apache lab environment and validated detection, monitoring, and mitigation in Splunk.</p>
     </div>
@@ -484,7 +515,7 @@
     <div class="lab">
       <div class="lab-head">
         <span class="lab-title">Forensic Analysis of Social Media Applications</span>
-        <a class="lab-link" href="https://github.com/harshb30" target="_blank" rel="noopener">View on GitHub →</a>
+        <a class="lab-link" href="https://github.com/harshb30/ForensicAnalysis-Thesis-2022-09" target="_blank" rel="noopener">View on GitHub →</a>
       </div>
       <p>MSc project: end-to-end mobile forensic investigation of Snapchat and Instagram on Android, including full-device imaging and Autopsy analysis. Built Python Autopsy plugins to automate artifact discovery.</p>
     </div>
@@ -519,7 +550,7 @@
       </div>
       <div class="skill-row">
         <div class="skill-label">databases</div>
-        <div class="skill-items">Oracle, MS SQL — patch management, schema, imports</div>
+        <div class="skill-items">Oracle, MS SQL : patch management, schema, imports</div>
       </div>
       <div class="skill-row">
         <div class="skill-label">cicd_automation</div>
@@ -571,9 +602,9 @@
   <section id="achievements">
     <div class="section-head"><span class="prompt">~$</span><span class="cmd">tail achievements.log</span></div>
     <ul class="ach-list">
-      <li>Dassault Systèmes Evangelist Award — exceptional performance during the McLaren Racing production Go-Live upgrade.</li>
+      <li>Dassault Systèmes Evangelist Award for exceptional performance during the McLaren Racing production Go-Live upgrade.</li>
       <li>Ranked in the Top 2% on TryHackMe, completing hands-on cybersecurity labs and Advent of Quests.</li>
-      <li>Published an Android application on Google Play (May 2020) — 4.9/5 rating, users across the USA, UK, Australia, India, and Canada.</li>
+      <li>Published an Android application on Google Play (May 2020) securring 4.9/5 rating, users across the USA, UK, Australia, India, and Canada.</li>
       <li>Developed multilingual Google Assistant actions; received a Google Home device award for technical contribution by Google.</li>
       <li>Published CyberDefenders walkthroughs on Medium, covering malware analysis and threat intel.</li>
     </ul>
